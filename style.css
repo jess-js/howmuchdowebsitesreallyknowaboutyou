@@ -1,0 +1,930 @@
+html, body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 0; height: 100%; overflow: hidden;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  max-width: 900px;
+  cursor: default;
+}
+
+#video {
+  width: 400px;
+  height: 200px;
+  margin-top: 250px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#video.fade {
+  opacity: 0;
+}
+
+#begin {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  font-size: 40px;
+  width: 150px;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 2px;
+  
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#begin.fade {
+  opacity: 1;
+}
+
+#buttonHider {
+  background-color: black;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#buttonHider.fade {
+  opacity: 1;
+}
+
+#top {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#top.fade {
+  opacity: 0;
+}
+
+#middle {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#middle.fade {
+  opacity: 0;
+}
+
+#bottom {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#bottom.fade {
+  opacity: 0;
+}
+
+#cookies {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 150px;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#cookies:hover {
+  opacity: 0;
+}
+
+#notimportant {
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  position: absolute;
+  cursor: default;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#notimportant.fade {
+  opacity: 0;
+}
+
+#centreText {
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 40px;
+  color: lime;
+  z-index: 2;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  
+  cursor: default;
+  opacity: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#centreText.fade {
+  opacity: 1;
+}
+
+#continue {
+  position: absolute;
+  opacity: 0;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 25px;
+  padding: 7px 20px;
+  cursor: pointer;
+  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+  background-color: lime;
+  border: 1px solid white;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#continue.fade {
+  opacity: 1;
+}
+
+#no {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  
+  font-size: 25px;
+  padding: 7px 20px;
+  cursor: pointer;
+  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+  background-color: red;
+  border: 1px solid white;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+#no.fade {
+  opacity: 1;
+}
+
+#cart {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 80px;
+  height: 80px;
+}
+
+#shopTitle {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  font-size: 40px;
+  cursor: default;
+}
+
+#item0 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 150px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item1 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 340px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item2 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 530px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item3 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 720px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item4 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 910px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.topRow {
+  left: 110px;
+  position: absolute;
+  top: -30px;
+  z-index: 1;
+}
+
+.bottomRow {
+  left: 110px;
+  position: absolute;
+  top: 250px;
+  z-index: 1;
+}
+
+.topBtns {
+  left: 110px;
+  position: absolute;
+  top: 390px;
+  z-index: 1;
+}
+
+.bottomBtns {
+  left: 110px;
+  position: absolute;
+  top: 670px;
+  z-index: 1;
+}
+
+#item5 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 150px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item6 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 340px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item7 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 530px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item8 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 720px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item9 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 2px solid white;
+  top: 200px;
+  left: 910px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn0 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 188px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn1 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 378px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn2 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 568px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn3 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 758px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn4 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 948px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn5 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 188px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn6 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 378px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn7 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 568px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn8 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 758px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#btn9 {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 11px;
+  left: 948px;
+  position: absolute;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#item0.fade {
+  opacity: 0;
+}
+
+#item1.fade {
+  opacity: 0;
+}
+
+#item2.fade {
+  opacity: 0;
+}
+
+#item3.fade {
+  opacity: 0;
+}
+
+#item4.fade {
+  opacity: 0;
+}
+
+#item5.fade {
+  opacity: 0;
+}
+
+#item6.fade {
+  opacity: 0;
+}
+
+#item7.fade {
+  opacity: 0;
+}
+
+#item8.fade {
+  opacity: 0;
+}
+
+#item9.fade {
+  opacity: 0;
+}
+
+#btn0.fade {
+  opacity: 0;
+}
+
+#btn1.fade {
+  opacity: 0;
+}
+
+#btn2.fade {
+  opacity: 0;
+}
+
+#btn3.fade {
+  opacity: 0;
+}
+
+#btn4.fade {
+  opacity: 0;
+}
+
+#btn5.fade {
+  opacity: 0;
+}
+
+#btn6.fade {
+  opacity: 0;
+}
+
+#btn7.fade {
+  opacity: 0;
+}
+
+#btn8.fade {
+  opacity: 0;
+}
+
+#btn9.fade {
+  opacity: 0;
+}
+
+#informationShop {
+  position: absolute;
+  color: lime;
+  top: 70px;
+  left: 430px;
+  font-size: 25px;
+  cursor: default;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+#informationShop.fade {
+  opacity: 1;
+}
+
+#storeContinue {
+  width: 80px;
+  height: 35px;
+  background-color: lime;
+  cursor: pointer;
+  border: 1px solid white;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  position: absolute;
+  top: 70px;
+  left: 1160px;
+  color: black;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+#storeContinue.fade {
+  opacity: 1;
+}
+
+#cover {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 3;
+}
+
+#cover.fade {
+  opacity: 1;
+}
+
+#belowCentre {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 40px;
+  color: lime;
+  z-index: 2;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  
+  cursor: default;
+  opacity: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#belowCentre.fade {
+  opacity: 1;
+}
+
+#accept {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 231px;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  
+  opacity: 0;
+}
+
+#accept.fade {
+  opacity: 1;
+}
+
+#fake_cursor {
+  position: absolute;
+  width: 9px;
+  height: 17px;
+  top: 700px;
+  left: 1300px;
+  animation: movemouse 4s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes movemouse {
+  from {left: 90%;}
+  to {top: 59%; left: 50%;}
+}
+
+#title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  cursor: default;
+  
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  
+  opacity: 0;
+}
+
+#title.fade {
+  opacity: 1;
+}
+
+#coffee {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 90%;
+  
+  transition: transform .2s;
+}
+
+#coffee:hover {
+  transform: scale(1.1); 
+}
